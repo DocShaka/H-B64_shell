@@ -1,3 +1,6 @@
+import random
+import string
+import os
 import base64
 from base64 import standard_b64decode, standard_b64encode
 from random import choice
@@ -8,7 +11,7 @@ def main():
     
     #ascii art 
     print(colored(text2art ("\t________________"),'green'))
-    print(colored(text2art ("\t_Hacheur_Base64_"),'green'))
+    print(colored(text2art ("\t______H-B64_____"),'green'))
     print(colored(text2art ("\t________________\n"),'green'))                      
 
     try:

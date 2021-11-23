@@ -1,20 +1,4 @@
-import random
-import string
-import os
-import base64
-from base64 import b64encode, b64decode
-from random import choice
-from art import *
-from termcolor import colored
 
-def main():
-    
-    #ascii art 
-    print(colored(text2art ("\t________________"),'green'))
-    print(colored(text2art ("\t______H-B64_____"),'green'))
-    print(colored(text2art ("\t________________\n"),'green'))                      
-
-    try:
         print("="*95)
         print("H-B64:$> Bonjour, que voulez vous faire ? (Encodé/Decodé) :\n")
         choice = input("H-B64:$>")

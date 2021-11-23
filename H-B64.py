@@ -2,7 +2,7 @@ import random
 import string
 import os
 import base64
-from base64 import standard_b64decode, standard_b64encode
+from base64 import b64encode, b64decode
 from random import choice
 from art import *
 from termcolor import colored
@@ -20,22 +20,22 @@ def main():
         choice = input("H-B64:$>")
 
         if choice == 'E':
-            encode_message =input("Hacheur_Base64:$> Entré le texte a encodé:>")
-            encoder = base64.standard_b64encode(encode_message)
-            print("H-B64:$> [+] En Cours d'Encodage.....\n")
+            encode_message =input("H-B64:$> Entré le texte a encodé:>")
+            encoder = encode_message.encode("ascii")
+            encode_bytes = base64.b64encode(encoder)
+            encode_string = encode_bytes.decode("ascii")
+            print("H-B64:$> [+] En Cours d'Encodage.....")
             print("H-B64:$> Encodage Terminé !\n")
-            print(encoder)
-            
-            main()
+            print("H-B64:$> le texte ", (encode_message), " donne en encodé ", (encode_string))
         
         elif choice == 'D':
             decode_message =input("H-B64:$> Entré le texte a décodé:>")
-            decoder = base64.standard_b64decode(decode_message)
-            print("H-B64:$> [+] En Cours de Décodage.....\n")
+            decoder = decode_message.encode("ascii")
+            decode_bytes = base64.b64decode(decoder)
+            decode_string = decode_bytes.decode("ascii")
+            print("H-B64:$> [+] En Cours de Décodage.....")
             print("H-B64:$> Décodage Terminé !\n")
-            print(decoder)
-
-            main()
+            print("H-B64:$> le hash", (decode_message), " donne en décrypté", (decode_string))
         
         print("H-B64:$> Voulez vous Retourné à l'acceuil ? (y/n)")
         choice = input("\t> ")

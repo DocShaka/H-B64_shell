@@ -1,6 +1,16 @@
+import os
+from os import *
+
+system("pip install termcolor")
+system("pip install art")
+system("pip install random")
+system("pip install string")
+system("pip install base64")
+system("pip install ")
+system("cls")
+
 import random
 import string
-import os
 import base64
 from base64 import b64encode, b64decode
 from random import choice
